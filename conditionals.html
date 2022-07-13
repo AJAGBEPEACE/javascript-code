@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .conditional{
+            background-color: green;
+            width: 60vh;
+            margin: auto;
+            padding: 30px;
+            margin-top: 20vh;
+            
+        }
+        input{
+            height: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            color: white;
+            background-color: red;
+             border: none;
+        }
+        p{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    <div class="conditional"> 
+    <div style="display: flex;">
+        <input type="text" id="score" placeholder="input your score">
+    <button onclick="checkGrade()">Check Grade</button>
+    </div>
+    <p id="disp">Result</p>
+    </div>
+    <script>
+        function checkGrade()
+            var number = Number(score.value)
+            if(score.value==""){
+                alert("input your score please")
+            }
+             if(number<=100){
+                disp.innerText = "A excellent"
+                disp.style.color = "rebeccapurple"
+                var song = new Audio("mixkit-ending-show-audience-clapping-478.wav")
+                song.play()
+            }
+             if(number<=60){
+                disp.innerText = "B good"
+                disp.style.color = "gold"
+
+            }
+             if(number<=40){
+                disp.innerText = "C try harder"
+                disp.style.color = "blue"
+                song.pause()
+            }
+             if(number<=35){
+                disp.innerText = "fail"
+                disp.style.color = "red"
+                song.pause()
+                var song = new Audio("fail-trombone-02.mp3")
+                song.play()
+            }
+             if (number>100){
+                disp.innerText = "invalid input"
+                disp.style.color = "white"
+            }
+            // if (number<-10) {
+            //     disp.innerText = "invalid input"
+            //     disp.style.color = "white"
+
+            // } 
+        // var myScore = score.value
+        // if(myScore>=70){
+        //     alert("Pass")
+        // }else if(myScore >50 && myScore <70){
+        //     alert("Average")
+        // }
+        // else if(myScore >50){
+        //     alert("fail")
+        // }
+        // }
+        // var myScore = 70
+    </script>
+</body>
+</html>

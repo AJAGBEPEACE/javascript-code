@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .anything{
+            width: 50vh;
+            background-color: rebeccapurple;
+            margin: auto;
+            padding: 30px;
+        }
+        input{
+            width: 50vh;
+            height: 10vh;
+            margin-top: 20px;
+            border-radius: 20px 0 10px 0;
+        }
+        button{
+            background-color: white;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        button:hover{
+            background-color: red;
+            color: white;
+            transform: translateY(10px);
+        }
+    </style>
+    <div class="anything">
+    <input type="text" placeholder="Enter First Value" id="first">
+    <input type="text" placeholder="Enter Second Value" id="second"><br>
+    <button onclick="addition()">Add</button>
+    <button onclick="subtraction()">Subtract</button>
+    <button onclick="division()">Divide</button>
+    <button onclick="multiplication()">Multiply</button>
+    </div>
+    <script>
+        function addition(){
+            var firstValue = Number(first.value)
+            var secondValue = Number(second.value)
+            alert(firstValue+secondValue)
+        }     
+        function subtraction(){
+            var firstValue = Number(first.value)
+            var secondValue = Number(second.value)
+            alert(firstValue-secondValue)
+        }
+        function division(){
+            var firstValue = Number(first.value)
+            var secondValue = Number(second.value)
+            alert(firstValue/secondValue)
+        }
+        function multiplication(){
+            var firstValue = Number(first.value)
+            var secondValue = Number(second.value)
+            alert(firstValue*secondValue)
+        }
+    </script>
+</body>
+</html>
